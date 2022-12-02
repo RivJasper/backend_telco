@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import tensorflow_addons as tfa
+import tensorflow_addons
 from tensorflow_addons.metrics import F1Score
 import joblib
 from flask import Flask, request, jsonify
