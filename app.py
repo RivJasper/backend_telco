@@ -13,7 +13,7 @@ with open('Processer.pkl', 'rb') as file_1:
   model_pipeline = joblib.load(file_1)
 
 def f1_score_macro():
-    return tfa.metrics.F1Score(num_classes = 1, average = 'macro', name = 'f1_score_macro', threshold = 0.5)
+    return F1Score(num_classes = 1, average = 'macro', name = 'f1_score_macro', threshold = 0.5)
 
 from tensorflow.keras.models import load_model
 model_ann = load_model('PredictModel.h5', custom_objects = {'F1score' : f1_score_macro})
